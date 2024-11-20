@@ -1,0 +1,94 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('Рисунок1.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.taro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    padding: 40px; /* Увеличенный отступ */
+    border-radius: 15px; /* Увеличенная радиус скругления углов */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); /* Увеличенная тень */
+    max-width: 80%;
+}
+
+.card__body {
+    text-align: center;
+}
+
+.card__title {
+    font-size: 36px; /* Увеличенный размер шрифта */
+}
+
+button {
+    padding: 20px 40px; /* Увеличенные внутренние отступы */
+    font-size: 18px; /* Увеличенный размер шрифта */
+    color: white; /* Цвет текста */
+    background-color: #007BFF; /* Цвет фона */
+    border: none; /* Убираем рамку */
+    cursor: pointer; /* Курсор при наведении становится рукой */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+}
+
+button:active {
+    transform: scale(0.95); /* Немного сжимаем кнопку */
+}
+
+#content {
+    margin-top: 60px; /* Увеличенный отступ сверху */
+}
+
+#content img {
+    max-width: 350px; /* Увеличенная максимальная ширина изображения */
+}
+
+.timer-text {
+    opacity: 0; /* Исходно скрыто */
+    animation: fadeIn 0.75s forwards; /* Увеличено время анимации */
+    font-size: 28px; /* Увеличенный размер шрифта */
+}
+
+.card-image {
+    visibility: hidden; /* Скрыто до конца таймера */
+    opacity: 0; /* Прозрачность 0 */
+    transition: all 1.5s ease; /* Увеличены переходы для анимации */
+}
+
+.show-image {
+    visibility: visible !important; /* Показать после таймера */
+    opacity: 1 !important; /* Сделать полностью видимым */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        max-width: 90%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
